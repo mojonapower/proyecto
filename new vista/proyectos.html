@@ -147,12 +147,25 @@
                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <div class="modal-body">
+                                                                    
                                                                         <div class="table-responsive">
-                                                                            <button type="button" class="btn btn-secondary mr-2"><i class="fa fa-edit"> </i> Editar Recurso</button>
-                                                                            <button type="button" class="btn btn-secondary mr-2"><i class="fa fa-clock-o"></i> Editar HH</button>
-                                                                            
-                                                                        </div>
+                                                                            <button type="button" class="btn btn-secondary mr-2" onclick="showDivEdit()" ><i class="fa fa-edit"> </i>Cambiar Recurso</button>
+                                                                            <button type="button" class="btn btn-secondary mr-2" onclick="showDivEditHH()"><i class="fa fa-clock-o"></i> Editar HH</button>
+                                                                            <button type="button" class="btn btn-secondary mr-2"onclick="showDivDelete()"><i class="fa fa-times-rectangle-o"></i> ELiminar Recurso</button>
+  
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div class="card-body" id="div-edit" style="display:none;">
+                                                                        
+                                                                        content1
+                                                                    </div>
+                                                                    <div class="card-body" id="div-edithh" style="display:none;">
+                                                                        
+                                                                        content2
+                                                                    </div>
+                                                                    <div class="card-body" id="div-delete" style="display:none;">
+                                                                        
+                                                                        content3
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
@@ -266,6 +279,30 @@
     //mostrar y ocultar divs :DDDD 
     function showDiv() {
         var x = document.getElementById('div-busquedaavanzada');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+        function showDivEdit() {
+        var x = document.getElementById('div-edit');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+            function showDivDelete() {
+        var x = document.getElementById('div-delete');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+            function showDivEditHH() {
+        var x = document.getElementById('div-edithh');
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
