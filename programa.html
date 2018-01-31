@@ -365,11 +365,20 @@
                                                     <div >
                                                 
                                                      
-                                                            <select class="form-control" id="form-field-select-1">
-                                                                <option value="">Seleccione...</option>
-                                                                <option value="bpsj">Reemplazar</option>
-                                                                <option value="bpa">Eitar HH</option>
-                                                                <option value="bpp">Eliminar</option>
+                                                            <select class="form-control" id="selector">
+                                                               <option value="">Seleccione...</option>
+                                                                <option value="OPR">Reemplazar</option>
+                                                                <option value="OPE">Editar HH</option>
+                                                                <option value="OPEL">Eliminar</option>
+                                                                    
+                                                                        <script>
+                                                                         $(function() {
+                                                                            $('#selector').change(function(){
+                                                                                $('.mostrar').hide();
+                                                                                $('#' + $(this).val()).show();
+                                                                            });
+                                                                        });
+                                                                </script>
                                                             
                                                             </select>
                                                         </div> 
@@ -434,11 +443,11 @@
                                                 </td>
                                                 <td>
                                                     <div class="center">
-                                                            <select class="form-control" id="form-field-select-1">
+                                                            <select class="form-control" >
                                                                 <option value="">Seleccione...</option>
-                                                                <option value="bpsj">Reemplazar</option>
-                                                                <option value="bpa">Eitar HH</option>
-                                                                <option value="bpp">Eliminar</option>
+                                                                <option value="OPR">Reemplazar</option>
+                                                                <option value="OPE">Editar HH</option>
+                                                                <option value="OPEL">Eliminar</option>
                                                             
                                                             </select>
                                                     </div>
@@ -502,11 +511,11 @@
                                                 </td>
                                                 <td>
                                                     <div class="center">
-                                                            <select class="form-control" id="form-field-select-1">
+                                                            <select class="form-control" >
                                                                 <option value="">Seleccione...</option>
-                                                                <option value="bpsj">Reemplazar</option>
-                                                                <option value="bpa">Eitar HH</option>
-                                                                <option value="bpp">Eliminar</option>
+                                                                <option value="OPR">Reemplazar</option>
+                                                                <option value="OPE">Editar HH</option>
+                                                                <option value="OPEL">Eliminar</option>
                                                             
                                                             </select>
                                                     </div>
@@ -570,11 +579,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="center">
-                                                            <select class="form-control" id="form-field-select-1">
+                                                            <select class="form-control" >
                                                                 <option value="">Seleccione...</option>
-                                                                <option value="bpsj">Reemplazar</option>
-                                                                <option value="bpa">Eitar HH</option>
-                                                                <option value="bpp">Eliminar</option>
+                                                                <option value="OPR">Reemplazar</option>
+                                                                <option value="OPE">Editar HH</option>
+                                                                <option value="OPEL">Eliminar</option>
+
                                                             
                                                             </select>
                                                     </div>
@@ -638,11 +648,11 @@
                                                 </td>
                                                 <td>
                                                     <div class="center">
-                                                            <select class="form-control" id="form-field-select-1">
+                                                            <select class="form-control" >
                                                                 <option value="">Seleccione...</option>
-                                                                <option value="bpsj">Reemplazar</option>
-                                                                <option value="bpa">Eitar HH</option>
-                                                                <option value="bpp">Eliminar</option>
+                                                                <option value="OPR">Reemplazar</option>
+                                                                <option value="OPE">Editar HH</option>
+                                                                <option value="OPEL">Eliminar</option>
                                                             
                                                             </select>
                                                     </div>
@@ -1069,12 +1079,14 @@
                             <!-- hasta aca -->
                             <!-- PAGE CONTENT ENDS -->
                         </div>
+                        
+                        <div id="OPR" class="mostrar" style="display:none"> holi </div>
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
                 </div>
                 <!-- /.page-content -->
-            </div>
+            </div>      
             <!-- /.main-content -->
             <div class="hr hr-18 dotted hr-double"></div>
         </div>

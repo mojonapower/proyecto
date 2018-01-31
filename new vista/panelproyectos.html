@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Panel de proyectos</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+    <div class=" container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="bg-white text-center navbar-brand-wrapper">
+                <a class="navbar-brand brand-logo" href="index.html"><img src="transbank.png" /></a>
+            </div>
+            <h3 class="page-heading mb-4"><font color="white">Panel de Proyectos</font> </h3>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <!-- partial:partials/_sidebar.html -->
+                <nav class="bg-white sidebar sidebar-offcanvas" id="sidebar">
+                    <div class="user-info">
+                        <img src="images/face.jpg" alt="">
+                        <p class="name">Nombre Usuario</p>
+                        <p class="designation">Puesto</p>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="panelproyectos.html">
+                <img src="images/icons/1.png" alt="">
+                <span class="menu-title">Panel de Proyectos</span>
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="capacidadasignable.html">
+                <img src="images/icons/2.png" alt="">
+                <span class="menu-title">Capacidad Asignada</span>
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="capacidadutilizada.html">
+                <img src="images/icons/5.png" alt="">
+                <span class="menu-title">Capacidad Utilizada  </span>
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="capacidaddisponible.html">
+                <img src="images/icons/6.png" alt="">
+                <span class="menu-title">Capacidad Disponible</span>
+              </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                <img src="images/icons/10.png" alt="">
+                <span class="menu-title">Configuración</span>
+              </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- partial -->
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-md-5 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mis Proyectos</h5>
+                                    <div>
+                                        <label for="form-field-select-1"> <strong>Buscar por Rol</strong></label>
+                                        <select class="form-control" id="form-field-select-1">
+                                            <option value=""></option>
+                                            <option value="p1">Rol</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="form-field-select-1"><strong>Tipo</strong></label>
+                                        <select class="form-control" id="form-field-select-1">
+                                            <option value=""></option>
+                                            <option value="p1">Proyectos</option>
+                                            <option value="p1">Mantenciones</option>
+                                            <option value="p1">Proyectos Ágiles</option>
+                                        </select>
+                                    </div>
+                                    <hr>
+                                    <button type="button" class="btn btn-primary mr-2">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <button type="button" class="btn btn-success mr-2" onclick="showDiv()">Búsqueda Avanzada</button>
+                            <div class="card">
+                                <div class="card-body" id="div-busquedaavanzada" style="display:none;">
+                                    <strong>Gerencia</strong>
+                                    <div class="form-check">
+                                        <label>
+                                            <input type="checkbox" class="form-check-input"> Gerencia de Marketing
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label>
+                                            <input type="checkbox" class="form-check-input"> Gerencia de Proyectos
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label>
+                                            <input type="checkbox" class="form-check-input"> Programa
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <strong>Sub Gerencia</strong>
+                                    <select class="form-control" id="form-field-select-1">
+                                        <option value=""></option>
+                                        <option value="p1">Sub Gerencia</option>
+                                    </select>
+                                    <hr>
+                                    <strong>Área</strong>
+                                    <select class="form-control" id="form-field-select-1">
+                                        <option value=""></option>
+                                        <option value="p1">Área</option>
+                                    </select>
+                                    <hr>
+                                    <strong>Jefe Proyecto</strong>
+                                    <select class="form-control" id="form-field-select-1">
+                                        <option value=""></option>
+                                        <option value="p1">Jefe Proyecto</option>
+                                    </select>
+                                    <hr>
+                                    <button type="button" class="btn btn-primary mr-2">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-deck">
+                        <div class="card col-lg-12 px-0 mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table center-aligned-table">
+                                        <thead>
+                                            <!--aca quiero un TR que abarque todos los tr que tengan que ver con el tiempo -->
+                                            <tr class="text-primary">
+                                                <th>Proyecto</th>
+                                                <th>Inicio</th>
+                                                <th>Término</th>
+                                                <th> 01/2018</th>
+                                                <th> 02/2018</th>
+                                                <th> 03/2018</th>
+                                                <th> 04/2018</th>
+                                                <th> 05/2018</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-success">
+                                                <th><a href="proyectos.html">Proyecto 1</a></th>
+                                                <td>DD/MM/AAA</td>
+                                                <td>DD/MM/AAA</td>
+                                                <td>
+                                                    <button class="btn btn-success mr-2"></button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-success mr-2"></button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-warning mr-2"></button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-success mr-2"></button>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-success mr-2"></button>
+                                                </td>
+                                                </tr>
+                                                <tr class="table-danger">
+                                                    <th><a href="proyectos.html">Proyecto 2</a></th>
+                                                    <td>DD/MM/AAA</td>
+                                                    <td>DD/MM/AAA</td>
+                                                    <td>
+                                                        <button class="btn btn-warning mr-2"></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-danger mr-2"></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-warning mr-2"></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-danger mr-2"></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-warning mr-2"></button>
+                                                    </td>
+
+                                                    <tr class="table-warning">
+                                                        <th><a href="proyectos.html">Proyecto 3</a></th>
+                                                        <td>DD/MM/AAA</td>
+                                                        <td>DD/MM/AAA</td>
+                                                        <td>
+                                                            <button class="btn btn-warning mr-2"></button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-warning mr-2"></button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-warning mr-2"></button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-success mr-2"></button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger mr-2"></button>
+                                                        
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="float-right">
+                
+            </span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+    //mostrar y ocultar divs :DDDD 
+    function showDiv() {
+        var x = document.getElementById('div-busquedaavanzada');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
+    <script>
+    //modal para modificar los Recursos
+    $(".modal-wide").on("show.bs.modal", function() {
+        var height = $(window).height() - 200;
+        $(this).find(".modal-body").css("max-height", height);
+    });
+    </script>
+</body>
+
+</html>
