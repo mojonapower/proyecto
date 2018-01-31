@@ -148,14 +148,16 @@
                                                                     <div class="table-responsive">
                                                                         <button type="button" class="btn btn-secondary mr-2" onclick="showDivEdit()"><i class="fa fa-edit"> </i>Cambiar Recurso</button>
                                                                         <button type="button" class="btn btn-secondary mr-2" onclick="showDivEditHH()"><i class="fa fa-clock-o"></i> Editar HH</button>
-                                                                        <button type="button" class="btn btn-secondary mr-2" onclick="showDivDelete()"><i class="fa fa-times-rectangle-o"></i> ELiminar Recurso</button>
+                                                                        
+                                                                            <button type="button" class="btn btn-secondary mr-2" onclick="showDivDelete()"><i class="fa fa-times-rectangle-o"></i> ELiminar</button>
+                                                                        
                                                                     </div>
                                                                     <hr>
                                                                     <div class="card-body" id="div-edit" style="display:none;">
                                                                         <div>
                                                                             <label for="form-field-select-1"> <strong>Reemplazar Jefe Proyecto</strong></label>
                                                                             <select class="form-control" id="form-field-select-1">
-                                                                                <option value=""> Jefe PRoyecto Disponible</option>
+                                                                                <option value=""> Jefe Proyecto Disponible</option>
                                                                                 <option value="p1">JP 1</option>
                                                                                 <option value="p1">JP 2</option>
                                                                                 <option value="p1">JP 3</option>
@@ -176,16 +178,52 @@
                                                                                         <th> 03/2018</th>
                                                                                         <th> 04/2018</th>
                                                                                         <th> 05/2018</th>
-                                                                                        <th>
-                                                                                            <button href="#" class="btn btn-primary btn-sm">Agregar Recurso</button>
-                                                                                        </th>
                                                                                     </tr>
                                                                                 </thead>
+                                                                                <tbody>
+                                                                                    <th>Proyect Management</th>
+                                                                                    <th>Juan Malverde</th>
+                                                                                    <th></th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="20" min="1" max="32" placeholder="">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[10]" class="form-control input-number" value="30" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="13" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="32" min="1" max="32">
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        <input type="input-number" name="quant[1]" class="form-control input-number" value="43" min="1" max="32">
+                                                                                    </th>
+                                                                                </tbody>
                                                                             </table>
                                                                         </div>
                                                                     </div>
                                                                     <div class="card-body" id="div-delete" style="display:none;">
-                                                                        content3
+                                                                        <div id="normalModal" class="modal fade">
+                                                                            <div class="modal-dialog">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4 class="modal-title">Confirmar Acción</h4>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <p>¿Está seguro de que quiere eliminar el presente recurso?&hellip;</p>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                                                        <button type="button" class="btn btn-primary">Confirmar</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- /.modal-content -->
+                                                                            </div>
+                                                                            <!-- /.modal-dialog -->
+                                                                        </div>
+                                                                        <!-- /.modal -->
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
